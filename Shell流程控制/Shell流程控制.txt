@@ -1,0 +1,50 @@
+ 和Java、PHP等语言不一样，sh的流程控制不可为空，如(以下为PHP流程控制写法)：
+
+<?php
+if (isset($_GET["q"])) {
+    search(q);
+}
+else {
+    // 不做任何事情
+}
+
+在sh/bash里可不能这么写，如果else分支没有语句执行，就不要写这个else。 
+
+
+ 无限循环
+
+无限循环语法格式：
+
+while :
+do
+    command
+done
+
+或者
+
+while true
+do
+    command
+done
+
+或者
+
+for (( ; ; ))
+
+
+ until 循环
+
+until循环执行一系列命令直至条件为真时停止。
+
+until循环与while循环在处理方式上刚好相反。
+
+一般while循环优于until循环，但在某些时候—也只是极少数情况下，until循环更加有用。
+
+until 语法格式:
+
+until condition
+do
+    command
+done
+
+条件可为任意测试条件，测试发生在循环末尾，因此循环至少执行一次—请注意这一点。
